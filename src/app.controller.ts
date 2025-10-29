@@ -13,4 +13,13 @@ export class AppController {
   echo(@Body() data: any){
     return this.appService.echo(data);
   }
+  @Post('save')
+  async save(@Body('message') message: string) {
+    return this.appService.save(message);
+  }
+
+  @Get('messages')
+  async findAll() {
+    return this.appService.get();
+  }
 }
