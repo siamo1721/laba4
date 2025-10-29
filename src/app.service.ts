@@ -9,7 +9,7 @@ export class AppService {
     return {
       status: 'received',
       you_sent: data,
-      length: data ? JSON.stringify(data) : null,
+      length: data.length ? JSON.stringify(data) : null,
     }
   }
 }
